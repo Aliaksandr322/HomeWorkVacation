@@ -1,5 +1,7 @@
 package dateTime;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
@@ -11,7 +13,12 @@ public class Main {
 //        task3();
 //        task4();
 //        task5();
-        task6();
+//        task6();
+//        task7();
+//        task8();
+//        task9();
+//        task10();
+        task11();
     }
     public static void task1(){
         int year = 2015;
@@ -78,4 +85,53 @@ public class Main {
         System.out.println("Time in local zone: " + calendarNY.get(Calendar.HOUR_OF_DAY) + ":"
                 + calendarNY.get(Calendar.MINUTE)+":"+calendarNY.get(Calendar.SECOND));
     }
+
+    public static void task7(){
+        Calendar calendar = Calendar.getInstance();
+
+        System.out.println(calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
+    }
+    public static void task8(){
+        Calendar calendar = Calendar.getInstance();
+
+        calendar.set(Calendar.DAY_OF_MONTH, calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
+        System.out.println(calendar.getTime());
+    }
+
+    public static void task9(){
+        Calendar calendar = Calendar.getInstance();
+
+        calendar.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
+
+        DateFormat dateFormat = new SimpleDateFormat("EEE dd/MM/yyyy");
+
+        System.out.println(dateFormat.format(calendar.getTime()));
+
+        for (int i = 0; i < 6 ; i++){
+            calendar.add(Calendar.DAY_OF_WEEK,1);
+        }
+        System.out.println(dateFormat.format(calendar.getTime()));
+    }
+
+    public static void task10(){
+        Calendar calendar = Calendar.getInstance();
+
+        calendar.set(Calendar.DAY_OF_MONTH,1);
+
+        DateFormat dateFormat = new SimpleDateFormat("EEE dd/MM/yyyy");
+
+        System.out.println(dateFormat.format(calendar.getTime()));
+
+        for (int i = 0; i < calendar.getActualMaximum(Calendar.DAY_OF_MONTH) - 1; i++){
+            calendar.add(Calendar.DAY_OF_WEEK,1);
+        }
+        System.out.println(dateFormat.format(calendar.getTime()));
+    }
+    public static void task11(){
+        Calendar calendar = Calendar.getInstance();
+        int date = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
+        System.out.println("Number of days of the current month : " + date);
+
+    }
+
 }
