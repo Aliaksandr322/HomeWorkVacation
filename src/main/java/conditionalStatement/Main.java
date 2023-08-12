@@ -13,8 +13,18 @@ public class Main {
 //        task7();
 //        task8();
 //        task9();
-        task10();
+//        task10();
+//        task11();
+//        task12();
+//        task13();
+//        task14();
+//        task15();
+//        task16();
+        task17();
     }
+
+
+
     public static void task1(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Input number: ");
@@ -251,6 +261,82 @@ public class Main {
         System.out.println ("The first 10 natural numbers are:\n");
         for (int i = 1; i <=10 ; i++){
             System.out.println(i);
+        }
+    }
+
+    public static void task11(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input the number:  ");
+        int num = sc.nextInt();
+        int sum = 0;
+        for (int i = 0; i <= num; i++){
+            sum += i;
+        }
+        System.out.println("The Sum of Natural Number upto n terms : " + num + "" + sum);
+    }
+    public static void task12(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input the number:  ");
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+        int num3 = sc.nextInt();
+        int num4 = sc.nextInt();
+        int num5 = sc.nextInt();
+        double sum = num1 + num2 + num3 + num4 + num5;
+        System.out.println("The sum of 5 no is : " + sum);
+        System.out.println("The Average is : " + (sum/5));
+    }
+    public static void task13() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input the number of terms :  ");
+        int num = sc.nextInt();
+        for (int i = 1 ; i <= num; i++){
+            System.out.println("Number is :" + i +" and cube of 1 is :" + Math.pow(i,3));
+        }
+    }
+    public static void task14(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input number of terms : ");
+        int num = sc.nextInt();
+        for (int i = 0; i <= num; i++){
+            System.out.println(num + " x " + i + " = " + num * i);
+        }
+    }
+    public static void task15(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input number of terms : ");
+        int num = sc.nextInt();
+        int sum = 0;
+        System.out.println("The odd numbers are : ");
+        for (int i = 1; i <= num * 2; i++){
+            if (i % 2 != 0){
+                System.out.println(i);
+                sum +=i;
+            }
+        }
+        System.out.println("The Sum of odd Natural Number upto 5 terms is: " + sum);
+    }
+    public static void task16() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input number of terms : ");
+        int num = sc.nextInt();
+        String str = "";
+        for (int i = 1; i <= num; i++){
+            str += Integer.toString(i);
+            System.out.println(str);
+        }
+    }
+    public static void task17() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input number of terms : ");
+        int num = sc.nextInt();
+        String str = "";
+        for (int i = 1; i <= num; i++){
+            for (int j = 1; j <= i; j++){
+                str += Integer.toString(i);
+            }
+            System.out.println(str);
+            str = "";
         }
     }
 
